@@ -1,0 +1,396 @@
+html,body{
+	margin: 0;
+	height: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+ 
+h1{
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 7px;
+	font-size: 55px;
+}
+
+h4{
+	color: rgba(0, 0, 0, .2);
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+
+p{
+
+}
+
+/*navigation menu bar*/
+
+.topbar {
+	background-color: #5D617A;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	margin-top: 0px;
+	z-index: 20;
+}
+
+.topbar-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  bottom:auto;
+}
+
+.navbar::after {
+	clear: both;
+}
+
+.navbar {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-item {
+	float : left;
+	font-size: 20px;
+	list-style-type: none;
+}
+
+.navbar-item li {
+	margin: 0px;
+	float: left;
+}
+
+.navbar-item a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 20px 30px;
+}
+
+.navbar-item a:hover {
+	background-color: #92B6B1;
+}
+
+ul {
+	margin: 0;
+}
+
+/*landing section*/
+
+#landing-container{
+	width: 100%;
+	height: 100%;
+	background-color: #8494AB;
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 200px rgba(0,0,0,0.6) inset;
+  z-index: 5;
+}
+
+#filter{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .3);
+	position: absolute;
+	z-index: 5;
+}
+
+#landing-img{
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+}
+
+#landing-text {
+	width: 600px;
+	height: 200px;
+	/*background-color: rgba(0,0,0,0.1);*/
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	position: relative;
+	top: 45%;
+	z-index: 10;
+	color: white;
+	text-shadow: 2px 2px 5px #000000;
+	opacity: 0;
+	-webkit-animation: fadein 2s ease-in alternate forwards, scale 2s ease-in alternate forwards;
+    -moz-animation: fadein 2s ease-in alternate forwards, scale 2s ease-in alternate forwards;
+    animation: fadein 2s ease-in alternate forwards, scale 2s ease-in alternate forwards;
+
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+svg {
+	width: 100%;
+	display: block;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 1;
+	-webkit-animation: fadeout 2s ease-in alternate forwards;
+    -moz-animation: fadeout 2s ease-in alternate forwards;
+    animation: fadeout 2s ease-in alternate forwards;
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+}
+
+path {
+	stroke-dasharray: 1700;
+	stroke-dashoffset: 1700;
+	animation: dash 3s ease-in forwards;
+	-webkit-animation: dash 3s ease-in forwards;
+	-moz-animation: dash 3s ease-in forwards;
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+		opacity: 1;
+	}
+}
+
+#staff {
+	width: 100%;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#music {
+	opacity: 0;
+	width: 100%;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-animation: fadein .7s ease-in alternate forwards;
+    -moz-animation: fadein .7s ease-in alternate forwards;
+    animation: fadein .7s ease-in alternate forwards;
+    -webkit-animation-delay: 2.5s;
+    -moz-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@-webkit-keyframes scale {
+    from { transform: scale(.9); 
+    	transform-origin: 50% 0;}
+    to { transform: scale(1); }
+}
+
+@-moz-keyframes scale {
+    from { transform: scale(.9); 
+    	transform-origin: 50% 0;}
+    to { transform: scale(1); }
+}
+
+@keyframes scale {
+    from { transform: scale(.9); 
+    	transform-origin: 50% 0;}
+    to { transform: scale(1); }
+}
+
+/*gallery section*/
+
+.my-container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.gallery {
+	padding-top: 80px;
+	text-align: center;
+}
+
+.gallery img {
+	width: 200px;
+}
+
+.gallery-grid li a {
+	text-decoration: none;
+	display: block;
+	width: 210px;
+	height: 150px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.gallery-item-alt {
+	display: none;
+}
+
+.video-content {
+	display: none;
+}
+
+.hover-overlay {
+	background-color: rgba(146, 182, 177, .5);
+	padding: 20 px;
+	width: 210px;
+    height: 150px;
+    display: none;
+}
+
+.hover-text {
+	text-transform: uppercase;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 40px;
+	color: white;
+	font-weight: bold;
+}
+
+.gallery-grid li {
+	list-style: none;
+	margin: 10px;
+	float: left;
+}
+
+.clearfix { 
+	clear: both;
+}
+
+
+/*overlay for gallery*/
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 22;
+	background-color: rgba(0, 0, 0, .5);
+	display: none;
+	text-align:center;
+}
+
+.overlay-view {
+	background-color: white;
+	padding: 40px;
+	/*width: 960px;*/
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 25;	
+	/*display: block;*/
+	display: inline-block;
+}
+
+.pic-container {
+	float: left;
+}
+
+.pic-info {
+	width: 200px;
+	margin: 0 auto;
+	padding-top: 40px;
+	text-align: left;
+	float: left;
+	padding: 0 0 0 40px;
+}
+
+.display {
+	margin: 0 auto;
+	display: block;
+}
+
+/*contact section*/
+
+#contact-container {
+	margin-top: 80px;
+	width: 100%;
+	background-color: #8494AB;
+	height: 360px;
+}
+
+.contact {
+	padding-top: 80px;
+	padding-bottom: 50px;
+	width: 510px;
+	margin: 0 auto;
+}
+
+#profile {
+	width: 200px;
+    height: 200px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    overflow: hidden;
+    float: left;
+}
+
+#profile-pic {
+	height: 200px;
+}
+
+#contact-info {
+	float: right;
+	width: 280px;
+}
+
+#bottom {
+	width: 100%;
+	height: 100px;
+}
